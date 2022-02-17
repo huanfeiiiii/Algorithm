@@ -1,5 +1,4 @@
 # -*- coding:utf-8 -*-
-# 已解决
 
 strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
 d1 = {}
