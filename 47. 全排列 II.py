@@ -1,21 +1,21 @@
 # -*- coding:utf-8 -*-
-# 未解决
+# 已解决
+# DFS + 历史检索
 
-nums = [-1, 2, -1, 2, 1, -1, 2, 1]
+nums = [1, 1, 2]
 
-data = [[i, ] for i in nums]
+nums_list = [[[], nums]]
+history = []
+while len(nums_list[0][1]) > 0:
+    stack = nums_list.pop(0)
+    if stack in history:
+        continue
+    history.append(stack)
+    for i in stack[1]:
+        right = stack[1][:]
+        right.remove(i)
+        left = stack[0][:]
+        left.append(i)
+        nums_list.append([left, right])
 
-for i in range(len(nums) - 1):
-    l1 = []
-    for j in data:
-        for k in nums:
-            if nums.count(k) > j.count(k):
-                s = list(j)
-                s.append(k)
-                l1.append(s)
-    data = l1
-print(data)
-# for i in data:
-#     while data.count(i) != 1:
-#         data.remove(i)
-# print(data)
+print([i[0] for i in nums_list])
