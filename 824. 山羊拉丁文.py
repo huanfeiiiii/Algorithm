@@ -13,6 +13,6 @@ for num, data in enumerate(l1):
         first = data.pop(0)
         data.append(first)
         data.append('ma')
-    data.append('a'*(num+1))
+    data.append('a' * (num + 1))
     l2.append(''.join(data))
 print(l2)

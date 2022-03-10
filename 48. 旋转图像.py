@@ -18,4 +18,3 @@ for i in range(len(matrix) - 1):
         matrix[right[0]][right[1]], matrix[left[0]][left[1]] = matrix[left[0]][left[1]], matrix[right[0]][right[1]]
         right[1] += 1
 print(matrix)
-

@@ -13,3 +13,18 @@ def generateParenthesis(n: int) -> list:
         if min([i.count(')') for i in l1]) == n:
             return l1
 
+
+def generateParenthesis2(n):
+    l1 = ['']
+    while l1[0].count('(') < n:
+        temp = l1.pop(0)
+        for i in range(len(temp) + 1):
+            in_temp = list(temp)
+            in_temp.insert(i, '()')
+            in_temp = ''.join(in_temp)
+            if in_temp not in l1:
+                l1.append(in_temp)
+    return l1
+
+
+print(generateParenthesis2(3))
