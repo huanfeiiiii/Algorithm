@@ -1,17 +1,11 @@
 # _*_ coding:utf-8 _*_
 
-history = {}
+class test:
+    name = 'das'
+
+    def __init__(self):
+        pass
 
 
-def count(num):
-    if num in history:
-        return history[num]
-    if num == 2:
-        return 2
-    if num == 1:
-        return 1
-    history[num] = count(num - 1) + count(num - 2)
-    return count(num - 1) + count(num - 2)
-
-
-print(count(100))
+t = test()
+print(t.name)
